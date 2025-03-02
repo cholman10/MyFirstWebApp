@@ -8,6 +8,11 @@ h1 {
     text-decoration: underline;
 }
 
+a {
+    color: antiquewhite;
+    font-family: 'Courier New', Courier, monospace;
+}
+
 img {
     display: block;
     margin-left: auto;

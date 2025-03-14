@@ -10,11 +10,13 @@ button {
     border-color: antiquewhite;
     border-radius: 20px;
     padding: 30px;
+    cursor: pointer;
 }
 
 .button1 {
     margin-top: 20px;
     margin-bottom: 20px;
+    cursor: pointer;
 }
 
 h1 {
@@ -28,6 +30,7 @@ a {
 
 img {
     display: block;
+    width: 200px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 20px;
@@ -64,6 +67,7 @@ img {
 .grid-item img:hover {
     transform: scale(0.9);
     object-fit: contain;
+    transition: transform 0.5s ease-in-out;
 }
 
 .img1 { grid-column: span 2; height: 150px; }
@@ -87,4 +91,45 @@ img {
 .colour3 {
     text-decoration: line-through;
     font-style: italic;
+}
+
+@media (max-width: 600px) {
+    body {
+        text-align: center;
+    }
+
+    .borderone {
+        border-style: solid;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-bottom: 5px;
+        border-color: antiquewhite;
+        border-radius: 20px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .grid-item {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .grid-item img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
 }

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4</title>    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Nike Air Jordan 1</h1>
+    <div class="button1">
+        <a href="index.html"><button>Week 1</button></a>
+        <a href="week2.html"><button>Week 2</button></a>
+    </div>
+    <div class="grid-container">
+        <div class="grid-item img1"><img src="Images/image1.jpg" alt="Image 1"></div>
+        <div class="grid-item img2"><img src="Images/image2.jpg" alt="Image 2"></div>
+        <div class="grid-item img3"><img src="Images/image3.jpg" alt="Image 3"></div>
+        <div class="grid-item img4"><img src="Images/image4.jpg" alt="Image 4"></div>
+    </div> 
+    
+    <div>
+        <form id="mcqForm">
+            <label for="question1">1. What is your favorite colour?</label>
+            <select id="question1" name="question1" required>
+                <option value="">Select an option</option>
+                <option value="Red">Red</option>
+                <option value="Blue">Blue</option>
+                <option value="Green">Green</option>
+                <option value="Yellow">Yellow</option>
+            </select>
+            <br><br>
+            
+            <label for="question2">2. What is your favorite season?</label>
+            <select id="question2" name="question2" required>
+                <option value="">Select an option</option>
+                <option value="Spring">Spring</option>
+                <option value="Summer">Summer</option>
+                <option value="Autumn">Autumn</option>
+                <option value="Winter">Winter</option>
+            </select>
+            <br><br>
+            
+            <label for="question3">3. What is your preferred mode of transport?</label>
+            <select id="question3" name="question3" required>
+                <option value="">Select an option</option>
+                <option value="Car">Car</option>
+                <option value="Bike">Bike</option>
+                <option value="Train">Train</option>
+                <option value="Plane">Plane</option>
+            </select>
+            <br><br>
+            
+            <label for="question4">4. What type of music do you enjoy?</label>
+            <select id="question4" name="question4" required>
+                <option value="">Select an option</option>
+                <option value="Rock">Rock</option>
+                <option value="Pop">Pop</option>
+                <option value="Jazz">Jazz</option>
+                <option value="Classical">Classical</option>
+            </select>
+            <br><br>
+            
+            <button type="submit">Submit</button>
+        </form>
+
+    <p id="output"></p>
+    <p id="thankYouMessage" style="display: none; color: rgb(252, 254, 252);"><strong>Thank you for your choices!</strong></p>
+    
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

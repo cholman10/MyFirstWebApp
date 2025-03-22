@@ -1,3 +1,5 @@
+let formCompleted = false; // Tracks if the form is fully completed
+
 document.getElementById("mcqForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevent page refresh
     
@@ -7,11 +9,11 @@ document.getElementById("mcqForm").addEventListener("submit", function(event) {
     fields.forEach(id => {
         let field = document.getElementById(id);
         if (field.value === "") {
-            field.classList.add("incorrect"); // Turn red if empty
+            field.classList.add("incorrect"); // Turns red if empty
             field.classList.remove("correct");
             allAnswered = false;
         } else {
-            field.classList.add("correct"); // Turn green if answered
+            field.classList.add("correct"); // Turns green if answered
             field.classList.remove("incorrect");
         }
     });
@@ -20,6 +22,9 @@ document.getElementById("mcqForm").addEventListener("submit", function(event) {
         alert("All questions must be answered!");
         return;
     }
+
+    // Form completed successfully
+    formCompleted = true;
 
     // Display selected answers
     document.getElementById("output").innerHTML = 
@@ -30,11 +35,16 @@ document.getElementById("mcqForm").addEventListener("submit", function(event) {
     
     // Show thank you message
     document.getElementById("thankYouMessage").style.display = "block";
-
 });
 
 // Function to fetch a Chuck Norris joke
 async function fetchJoke() {
+    if (!formCompleted) {
+        document.getElementById("chuckJoke").innerHTML = "❌ Complete the form, and then ask for a joke.";
+        document.getElementById("chuckJoke").style.display = "block";
+        return;
+    }
+
     try {
         let response = await fetch("https://api.chucknorris.io/jokes/random");
         let data = await response.json();
@@ -49,5 +59,5 @@ async function fetchJoke() {
     }
 }
 
-// Event listener for the "Get a Joke" button
+// Event listener for the joke button (always visible)
 document.getElementById("newJokeBtn").addEventListener("click", fetchJoke);

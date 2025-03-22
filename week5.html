@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 4</title>    
+    <title>Week 5</title>    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,16 +11,16 @@
     <div class="button1">
         <a href="index.html"><button>Week 1</button></a>
         <a href="week2.html"><button>Week 2</button></a>
-        <a href="week5.html"><button>Week 5</button></a>
+        <a href="week4.html"><button>Week 4</button></a>
     </div>
-    <div class="grid-container">
-        <div class="grid-item img1"><img src="Images/image1.jpg" alt="Image 1"></div>
-        <div class="grid-item img2"><img src="Images/image2.jpg" alt="Image 2"></div>
-        <div class="grid-item img3"><img src="Images/image3.jpg" alt="Image 3"></div>
-        <div class="grid-item img4"><img src="Images/image4.jpg" alt="Image 4"></div>
-    </div> 
-    
+<div>
+    <button id="newJokeBtn">Get a Chuck Norris Joke</button>    
+    <p id="chuckJoke" style="display: none; font-style: italic;"></p>
+ </div>   
     <div>
+        <style>
+            select.correct { background-color: lightgreen; }
+        </style>
         <form id="mcqForm">
             <label for="question1">1. What is your favourite colour?</label>
             <select id="question1" name="question1" required>
